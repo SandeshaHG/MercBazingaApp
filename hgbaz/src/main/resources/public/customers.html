@@ -1,0 +1,367 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MERC CUSTOMERS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/hot-sneaks/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+
+    <script
+        src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+    <style type="text/css">
+				body {
+					color: #566787;
+					background: #f5f5f5;
+					font-family: 'Varela Round', sans-serif;
+					font-size: 13px;
+				}
+				.overlay {
+					position: fixed;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: rgba(0, 0, 0, 0.7);
+					transition: opacity 500ms;
+					visibility: hidden;
+					opacity: 0;
+				}
+				.overlay:target {
+					visibility: visible;
+					opacity: 1;
+				}
+
+
+				@media screen and (max-width: 700px){
+					.box{
+							width: 70%;
+						}
+						.popup{
+							width: 70%;
+					}
+				}
+				.table-wrapper {
+					background: #fff;
+					padding: 20px 25px;
+					margin: 30px 0;
+					border-radius: 3px;
+					box-shadow: 0 1px 1px rgba(0,0,0,.05);
+				}
+				.table-title {
+					padding-bottom: 15px;
+					background: #435d7d;
+					color: #fff;
+					padding: 16px 30px;
+					margin: -20px -25px 10px;
+					border-radius: 3px 3px 0 0;
+				}
+				.table-title h2 {
+					margin: 5px 0 0;
+					font-size: 24px;
+				}
+				.table-title .btn-group {
+					float: right;
+				}
+				.table-title .btn {
+					color: #fff;
+					float: right;
+					font-size: 13px;
+					border: none;
+					min-width: 50px;
+					border-radius: 2px;
+					border: none;
+					outline: none !important;
+					margin-left: 10px;
+				}
+				.table-title .btn i {
+					float: left;
+					font-size: 21px;
+					margin-right: 5px;
+				}
+				.table-title .btn span {
+					float: left;
+					margin-top: 2px;
+				}
+				table.table tr th, table.table tr td {
+					border-color: #e9e9e9;
+					padding: 12px 15px;
+					vertical-align: middle;
+				}
+				table.table tr th:first-child {
+					width: 60px;
+				}
+				table.table tr th:last-child {
+					width: 100px;
+				}
+				table.table-striped tbody tr:nth-of-type(odd) {
+					background-color: #fcfcfc;
+				}
+				table.table-striped.table-hover tbody tr:hover {
+					background: #f5f5f5;
+				}
+				table.table th i {
+					font-size: 13px;
+					margin: 0 5px;
+					cursor: pointer;
+				}
+				table.table td:last-child i {
+					opacity: 0.9;
+					font-size: 22px;
+					margin: 0 5px;
+				}
+				table.table td a {
+					font-weight: bold;
+					color: #566787;
+					display: inline-block;
+					text-decoration: none;
+					outline: none !important;
+				}
+				table.table td a:hover {
+					color: #2196F3;
+				}
+				table.table td a.edit {
+				    color: #FFC107;
+				}
+				table.table td a.delete {
+				    color: #F44336;
+				}
+				table.table td i {
+				    font-size: 19px;
+				}
+				table.table .avatar {
+					border-radius: 50%;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+
+				.modal .modal-dialog {
+					max-width: 400px;
+				}
+				.modal .modal-header, .modal .modal-body, .modal .modal-footer {
+					padding: 20px 30px;
+				}
+				.modal .modal-content {
+					border-radius: 3px;
+				}
+				.modal .modal-footer {
+					background: #ecf0f1;
+					border-radius: 0 0 3px 3px;
+				}
+				.modal .modal-title {
+				    display: inline-block;
+				}
+				.modal .form-control {
+					border-radius: 2px;
+					box-shadow: none;
+					border-color: #dddddd;
+				}
+				.modal textarea.form-control {
+					resize: vertical;
+				}
+				.modal .btn {
+					border-radius: 2px;
+					min-width: 100px;
+				}
+				.modal form label {
+					font-weight: normal;
+				}
+			</style>
+    <script>
+    var app = angular.module('app', []);
+    app.run(function($rootScope) {
+});
+
+        app.controller('updatecontroller',function($rootScope,$scope, $http, $location){
+            $scope.send=function(){
+              var url = "http://localhost:9090/update";
+              var config = {
+                headers : {
+                  'Content-Type' : 'application/json;charset=utf-8;'
+                }
+              }
+              var data={
+              id:$rootScope.id,
+              customerid:$rootScope.customerid,
+              email:$rootScope.email,
+              firstname:$rootScope.firstname,
+              lastname:$rootScope.lastname,
+              phone:$rootScope.phone,
+              city:$rootScope.city,
+              country:$rootScope.country
+              };
+              console.log(data.id);
+              $http.patch(url, data, config).then(function (response) {
+              }, function (response) {
+              });
+              }
+        });
+
+        app.controller('getallcustomersController', function($rootScope,$scope, $http, $location) {
+        		var url = "http://localhost:9090/getCustomers";
+        		var config = {
+        			headers : {
+        				'Content-Type' : 'application/json;charset=utf-8;'
+        			}
+        		}
+            $scope.editOrderAssign=function(customer)
+              {
+              $rootScope.id=customer.id;
+              $rootScope.customerid=customer.customerid;
+              $rootScope.email=customer.email;
+              $rootScope.firstname=customer.firstname;
+              $rootScope.lastname=customer.lastname;
+              $rootScope.phone=customer.city;
+              $rootScope.city=customer.country;
+              $rootScope.country=customer.phone;
+              }
+
+        		$http.get(url, config).then(function(response) {
+        				$scope.allcustomers = response.data;
+        		}, function(response) {
+        		});
+        });
+
+
+</script>
+  </head>
+  <body ng-app="app">
+    <div class="container">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h2>HANDLE STORE CUSTOMERS</h2>
+            </div>
+            <div class="col-sm-6">
+              <a href="/" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>VIEW ORDERS</span></a>
+            </div>
+          </div>
+        </div>
+        <div ng-controller="getallcustomersController" >
+          <table class="table table-striped table-hover" id="holiday_data">
+            <thead>
+            <tr>
+              <th>
+                CUSTOMER ID
+              </th>
+              <th>
+                EMAIL
+              </th>
+              <th>
+                FIRST NAME
+              </th>
+              <th>
+                LAST NAME
+              </th>
+              <th>
+                CITY
+              </th>
+              <th>
+                COUNTRY
+              </th>
+              <th>
+                PHONE
+              </th>
+              <th>
+                EDIT
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="customer in allcustomers">
+              <td>{{customer.customerid}}</td>
+              <td>{{customer.email}}</td>
+              <td>{{customer.firstname}}</td>
+              <td>{{customer.lastname}}</td>
+              <td>{{customer.city}}</td>
+              <td>{{customer.country}}</td>
+              <td>{{customer.phone}}</td>
+                <td><a href="#editEmployeeModal" data-toggle="modal"><button ng-click="editOrderAssign(customer)" class="btn btn-default btn-sm" onclick="location.href='#editEmployeeModal'" data-toggle="modal">
+                    <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button></a>
+                </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Edit Modal HTML -->
+    <div id="editEmployeeModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <form>
+
+            <div class="modal-body">
+              <div class="form-group">
+                <label>ID</label>
+
+                <input type="number"  class="form-control" ng-model="customerid" value="{{customerid}}" >
+
+              </div>
+              <div class="form-group">
+                <label>EMAIL</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="email" value="{{email}}">
+              </div>
+              <div class="form-group">
+                <label>FIRST NAME</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="firstname" value="{{firstname}}">
+              </div>
+              <div class="form-group">
+                <label>LAST NAME</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="lastname" value="{{lastname}}">
+              </div>
+              <div class="form-group">
+                <label>PHONE</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="phone" value="{{phone}}">
+              </div>
+              <div class="form-group">
+                <label>CITY</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="city" value="{{city}}">
+              </div>
+              <div class="form-group">
+                <label>COUNTRY</label>
+                <input type="text" maxlength="50" class="form-control" ng-model="country" value="{{country}}">
+              </div>
+            </div>
+
+            <div ng-controller="updatecontroller">
+            <div class="modal-footer">
+              <input type="button" onclick="this.form.reset();" class="btn btn-default" data-dismiss="modal" value="Cancel">
+              <button type="submit" ng-click="send()" onclick="location.reload();" class="btn btn-success" >SAVE</button>
+            </div>
+            </div>
+          </form>
+
+
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
+
